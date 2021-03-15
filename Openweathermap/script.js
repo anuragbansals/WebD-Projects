@@ -12,7 +12,15 @@ button.addEventListener("click", function () {
         if (request.status >= 200 && request.status < 400) {
             console.log(data);
             // console.log(search.value);
-            document.getElementById('display').innerHTML = data['main']['temp'];
+            document.getElementById('display').innerHTML = `${data['main']['temp']-273.15}`+' C';
+            if(data['weather'][0]['main']=='Haze'){
+                const haze = document.createElement('img');
+                haze.src = 'images/Haze1.jpg';
+                app.appendChild(haze);    
+            }
+            // const cloud = document.createElement('img');
+            // cloud.src = 'images/cloudSun1.jpg';
+            // app.appendChild(cloud);
         } else {
             const errorMessage = document.createElement('marquee');
             errorMessage.textContent = "Not working!!";
