@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="root">
-        <input type="text" name="city" id="search">
-        <input type="submit" class="submit" value="Search">
-        <!-- <button onclick="find">Search</button> -->
-        <div id="display"></div>
+        
+        <header>
+            <input type="text" autocomplete="off" class="search" placeholder="Search for a city..">
+            <input type="submit" value="Search" id="submit">
+        </header>
+        <main>
+            <section class="location">
+                <div class="city"></div>
+                <div class="date"></div>
+            </section>
+            <div class="current">
+                <div class="temp"></div>
+                <div class="weather"></div>
+            </div>
+        </main>
+
+
     </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
