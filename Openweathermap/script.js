@@ -12,7 +12,7 @@ if (d.getHours > 19) {
 button.addEventListener("click", function(){
     // console.log('hi');
     
-    // if (event.keyCode == 13) {
+     if (search.value!="") {
         var request = new XMLHttpRequest;
         request.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=' + search.value + '&appid=a0d210a51321ec28478ec57821fdafd0', true);
         request.onload = function () {
@@ -20,7 +20,7 @@ button.addEventListener("click", function(){
             if (request.status >= 200 && request.status < 400) {
 
                 // console.log(data);
-                // console.log(search.value);
+                // console.log(search.value)
                 // document.getElementById('display').innerHTML = `${data['main']['temp']-273.15}`+' C';
                 /*if(data['weather'][0]['main']=='Haze'){
                     const haze = document.createElement('img');
@@ -71,13 +71,15 @@ button.addEventListener("click", function(){
 
             } else {
                 const errorMessage = document.createElement('marquee');
-                errorMessage.textContent = "Not working!!";
-                app.appendChild(errorMessage);
+                // document.querySelector('.class').innerHTML = "Invalid input!!"
+                // errorMessage.textContent = "Not working!!";
+                // app.appendChild(errorMessage);
+                alert("Invalid Input!!");
             }
         }
 
 
-    // }
+    }
     request.send();
 })
 
