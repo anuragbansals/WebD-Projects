@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Editort</title>
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="image-editor.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    
+    <nav class="navbar navbar-light">
+        <img src="" alt="">
+    </nav>
+    <div id="container">
+        <div class="text_box">
+            <div id="imageEditor">
+                <section id="editorContainer">
+                    <canvas class="editor"></canvas>
+                </section>
+            </div>
+            <section id="toolbar">
+                <button id="upload" class="btn btn-success" title="Upload">Upload</button>
+                <button id="save" class="btn btn-danger" title="Save">Save</button>
+                <br> <br>
+                <button id="flipHor" class="btn btn-info" title="Flip Horizontally">Flip Horizontally</button>
+                <button id="flipVert" class="btn btn-info" title="Flip Vertical">Flip Vertical</button>
+                <br><br>
+                <button id="rotateL" class="btn btn-info" title="Rotate Left">Roatet Left</button>
+                <button id="rotateR" class="btn btn-info" title="Roate Right">Rotate Right</button>
+                <br><br>
+                <button id="resize" class="btn btn-info" title="Resize">Resize</button>
+                <button id="greyscale" class="btn btn-info" title="Convert to grayscale">Grayscale</button>
+            </section>
+        </div>
+    </div>
 </body>
 </html>
