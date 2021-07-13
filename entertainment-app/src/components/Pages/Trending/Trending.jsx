@@ -1,8 +1,13 @@
 import axios from 'axios'
 import React from 'react'
 import { useState } from 'react'
+import './trending.css'
+import SingleContent from '../../SingleContent/SingleContent'
+import { useEffect } from 'react'
+import CustomPagination from '../../Pagination/CustomPagination'
 
 const Trending = () => {
+    const [page, setPage] = useState(1)
     const [content, setContent] = useState([])
     
     const fetchTrending = async () => {
@@ -12,7 +17,7 @@ const Trending = () => {
     }
     useEffect(()=> {
         fetchTrending();
-    })
+    },[page])
 
     return (
         <div>
@@ -24,6 +29,7 @@ const Trending = () => {
                     })
                 }
             </div>
+            <CustomPagination setPage={setPage} />
         </div>
     )
 }

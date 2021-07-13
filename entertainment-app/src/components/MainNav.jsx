@@ -7,11 +7,12 @@ import { useHistory } from 'react-router-dom';
 import TvIcon from "@material-ui/icons/Movie"
 import SearchIcon  from '@material-ui/icons/Search';
 import MovieIcon from '@material-ui/icons/Movie';
+import { useEffect } from 'react';
 
 const useStyles = makeStyles({
   root: {
-    width: 500,
-    position: fixed,
+    width: "100%",
+    position: "fixed",
     bottom: 0,
     background: "#2d313a",
     zIndex: 100
